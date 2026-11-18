@@ -1,0 +1,53 @@
+<!-- {"title": "Apply online", "description": "Apply online for a Zahra Properties rental home in Columbus, Ohio.", "nav": "rentals", "file": "apply.html"} -->
+    <div class="page-head">
+      <div class="wrap stack">
+        <p class="eyebrow">Rental application</p>
+        <h1>Apply online</h1>
+        <p class="lead">About 10 minutes. Each adult (18+) who will live in the home fills in this form. After we review it, we send a secure link for your documents and the screening check — you never type your Social Security number on this website.</p>
+      </div>
+    </div>
+
+    <section style="padding-top:8px">
+      <div class="wrap">
+        <form class="form" name="rental-application" method="POST" action="/thanks" data-netlify="true" netlify-honeypot="company">
+          <input type="hidden" name="form-name" value="rental-application">
+          <p class="hidden"><label>Leave this empty <input name="company"></label></p>
+
+          <h3>The home</h3>
+          <div class="field full"><label for="p-home">Which home are you applying for?</label><input id="p-home" name="home" placeholder="Street or the name we gave you" required></div>
+          <div class="field"><label for="p-move">Desired move-in date</label><input id="p-move" name="move_in" type="date" required></div>
+          <div class="field"><label for="p-occ">Total people who will live there</label><input id="p-occ" name="occupants" type="number" min="1" required></div>
+
+          <h3>About you</h3>
+          <div class="field"><label for="p-first">Legal first name</label><input id="p-first" name="first_name" autocomplete="given-name" required></div>
+          <div class="field"><label for="p-last">Legal last name</label><input id="p-last" name="last_name" autocomplete="family-name" required></div>
+          <div class="field"><label for="p-email">Email</label><input id="p-email" name="email" type="email" autocomplete="email" required></div>
+          <div class="field"><label for="p-phone">Mobile</label><input id="p-phone" name="phone" type="tel" autocomplete="tel" required></div>
+          <div class="field full"><label for="p-addr">Current address</label><input id="p-addr" name="current_address" autocomplete="street-address" required></div>
+
+          <h3>Income</h3>
+          <div class="field"><label for="p-emp">Employer or income source</label><input id="p-emp" name="employer" required></div>
+          <div class="field"><label for="p-inc">Monthly income before tax</label><input id="p-inc" name="monthly_income" inputmode="decimal" placeholder="$" required></div>
+          <div class="field"><label for="p-len">How long with this employer / source</label><input id="p-len" name="employment_length"></div>
+          <div class="field"><label for="p-vouch">Housing voucher or assistance</label><select id="p-vouch" name="voucher"><option>No</option><option>Yes</option></select></div>
+
+          <h3>Rental history</h3>
+          <div class="field"><label for="p-ll">Current landlord or property manager</label><input id="p-ll" name="landlord_name"></div>
+          <div class="field"><label for="p-llc">Their phone or email</label><input id="p-llc" name="landlord_contact"></div>
+          <div class="field"><label for="p-rent">Current monthly rent</label><input id="p-rent" name="current_rent" inputmode="decimal" placeholder="$"></div>
+          <div class="field"><label for="p-why">Reason for moving</label><input id="p-why" name="reason_for_moving"></div>
+
+          <h3>Household</h3>
+          <div class="field"><label for="p-adults">Other adults' names and emails</label><textarea id="p-adults" name="other_adults" placeholder="We'll send each of them a link to this form" style="min-height:90px"></textarea></div>
+          <div class="field"><label for="p-pets">Pets (type, breed, weight)</label><textarea id="p-pets" name="pets" placeholder="None" style="min-height:90px"></textarea></div>
+          <p class="hint full">Assistance animals are not pets. Tell us if you need one or any other reasonable accommodation, and we'll work with you.</p>
+          <div class="field full"><label for="p-notes">Anything you'd like us to know</label><textarea id="p-notes" name="notes"></textarea></div>
+
+          <h3>Consent</h3>
+          <label class="check full"><input type="checkbox" name="consent_true" value="yes" required>I confirm the information above is true and complete.</label>
+          <label class="check full"><input type="checkbox" name="consent_verify" value="yes" required>I authorize Zahra Properties to verify my income and rental history and to request a tenant-screening report through a secure screening service, which I will complete separately.</label>
+          <button class="btn btn-navy full" type="submit">Submit application</button>
+          <p class="hint full">Zahra Properties applies the same written criteria to every applicant and follows fair-housing law. Equal Housing Opportunity.</p>
+        </form>
+      </div>
+    </section>

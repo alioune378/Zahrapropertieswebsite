@@ -1,0 +1,82 @@
+<!-- {"title": "Rentals", "description": "Rental homes in Columbus, Ohio from Zahra Properties. Request a viewing, ask what's available, or get an alert when a new home is listed.", "nav": "rentals", "file": "rentals.html"} -->
+    <div class="page-head">
+      <div class="wrap stack">
+        <p class="eyebrow">Rentals · Columbus, Ohio</p>
+        <h1>Find your next home</h1>
+        <p class="lead">Our homes are spread across Columbus neighborhoods and usually rent quickly. Tell us what you're looking for and we'll reply with what's available now or coming up, and book you a viewing.</p>
+        <div class="btns">
+          <a class="btn btn-navy" href="#viewing">Request a viewing</a>
+          <a class="btn btn-line" href="#alerts">Get new-listing alerts</a>
+        </div>
+      </div>
+    </div>
+
+    <section class="band-white" id="viewing" aria-labelledby="vh" style="padding-top:72px">
+      <div class="wrap split" style="align-items:start">
+        <div class="stack">
+          <p class="eyebrow">Book a viewing</p>
+          <h2 id="vh">Tell us what you need</h2>
+          <p class="muted">We reply within one business day with available homes that match and times to visit.</p>
+          <ul class="ticks">
+            <li>Viewings 7 days a week, by appointment</li>
+            <li>Confirmation by text or email</li>
+            <li>Apply online right after your visit</li>
+          </ul>
+        </div>
+        <form class="form" name="viewing-request" method="POST" action="/thanks" data-netlify="true" netlify-honeypot="company">
+          <input type="hidden" name="form-name" value="viewing-request">
+          <p class="hidden"><label>Leave this empty <input name="company"></label></p>
+          <div class="field"><label for="v-name">Full name</label><input id="v-name" name="name" autocomplete="name" required></div>
+          <div class="field"><label for="v-phone">Mobile</label><input id="v-phone" name="phone" type="tel" autocomplete="tel" required></div>
+          <div class="field full"><label for="v-email">Email</label><input id="v-email" name="email" type="email" autocomplete="email" required></div>
+          <div class="field"><label for="v-beds">Bedrooms</label>
+            <select id="v-beds" name="bedrooms"><option>Any</option><option>1</option><option>2</option><option>3</option><option>4+</option></select></div>
+          <div class="field"><label for="v-move">Move-in date</label><input id="v-move" name="move_in" type="date"></div>
+          <div class="field"><label for="v-area">Preferred area</label><input id="v-area" name="area" placeholder="e.g. Northeast Columbus, Westerville schools"></div>
+          <div class="field"><label for="v-budget">Monthly budget</label><input id="v-budget" name="budget" inputmode="numeric" placeholder="$"></div>
+          <fieldset class="choices full">
+            <legend>Best times for a viewing</legend>
+            <label><input type="checkbox" name="times[]" value="Weekday mornings">Weekday mornings</label>
+            <label><input type="checkbox" name="times[]" value="Weekday evenings">Weekday evenings</label>
+            <label><input type="checkbox" name="times[]" value="Weekends">Weekends</label>
+          </fieldset>
+          <div class="field full"><label for="v-msg">Anything else? <span class="hint">(pets, specific home you saw, questions)</span></label><textarea id="v-msg" name="message"></textarea></div>
+          <button class="btn btn-navy full" type="submit">Send viewing request</button>
+        </form>
+      </div>
+    </section>
+
+    <section id="alerts" aria-labelledby="ah">
+      <div class="wrap split" style="align-items:start">
+        <div class="stack">
+          <p class="eyebrow">New-listing alerts</p>
+          <h2 id="ah">Be the first to know</h2>
+          <p class="muted">Leave your email and what you're looking for. We'll write the day a matching home becomes available. No spam, and you can opt out anytime.</p>
+        </div>
+        <form class="form" name="listing-alerts" method="POST" action="/thanks" data-netlify="true" netlify-honeypot="company">
+          <input type="hidden" name="form-name" value="listing-alerts">
+          <p class="hidden"><label>Leave this empty <input name="company"></label></p>
+          <div class="field full"><label for="a-email">Email</label><input id="a-email" name="email" type="email" autocomplete="email" required></div>
+          <div class="field"><label for="a-beds">Bedrooms</label><select id="a-beds" name="bedrooms"><option>Any</option><option>1+</option><option>2+</option><option>3+</option><option>4+</option></select></div>
+          <div class="field"><label for="a-max">Max rent</label><input id="a-max" name="max_rent" inputmode="numeric" placeholder="$"></div>
+          <div class="field full"><label for="a-area">Areas</label><input id="a-area" name="areas" placeholder="Any area in Columbus"></div>
+          <button class="btn btn-brass full" type="submit">Notify me</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="band-sand" aria-labelledby="crit">
+      <div class="wrap split" style="align-items:start">
+        <div class="stack">
+          <p class="eyebrow">Before you apply</p>
+          <h2 id="crit">How we review applications</h2>
+          <p class="muted">Every applicant is reviewed with the same written criteria. Ask us for the full criteria for a specific home before you apply.</p>
+        </div>
+        <ul class="ticks">
+          <li>Each adult (18+) who will live in the home completes an application.</li>
+          <li>We verify identity, income and rental history.</li>
+          <li>A credit and background check runs through a secure screening service.</li>
+          <li>We respond as quickly as possible — usually within a few business days.</li>
+        </ul>
+      </div>
+    </section>

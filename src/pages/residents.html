@@ -1,0 +1,55 @@
+<!-- {"title": "Residents", "description": "Zahra Properties residents: request a repair online with photos, emergency guidance and rent information.", "nav": "residents", "file": "residents.html"} -->
+    <div class="page-head">
+      <div class="wrap stack">
+        <p class="eyebrow">For residents</p>
+        <h1>Resident center</h1>
+        <p class="lead">Request a repair, find what to do in an emergency, and get answers about rent and your lease.</p>
+      </div>
+    </div>
+
+    <section style="padding-top:0;padding-bottom:40px">
+      <div class="wrap">
+        <div class="note note-warn" role="note">
+          <strong>Emergency?</strong> Fire, gas smell or anyone in danger: leave the home and call <strong>911</strong>. For gas, call Columbia Gas at <a href="tel:18003444077">1-800-344-4077</a> from outside.
+          Flooding, no heat in winter or a burst pipe: call the emergency number in your lease right away, then submit the form below.
+        </div>
+      </div>
+    </section>
+
+    <section class="band-white" id="repair" aria-labelledby="rh" style="padding-top:72px">
+      <div class="wrap split" style="align-items:start">
+        <div class="stack">
+          <p class="eyebrow">Repairs</p>
+          <h2 id="rh">Request a repair</h2>
+          <p class="muted">Describe the problem and add a photo if you can. We confirm we received it and contact you to schedule the work.</p>
+          <ul class="ticks">
+            <li>One request per problem helps us fix things faster</li>
+            <li>A photo or short video saves a trip</li>
+            <li>Tell us when it's OK to come in</li>
+          </ul>
+        </div>
+        <form class="form" name="repair-request" method="POST" action="/thanks" data-netlify="true" netlify-honeypot="company" enctype="multipart/form-data">
+          <input type="hidden" name="form-name" value="repair-request">
+          <p class="hidden"><label>Leave this empty <input name="company"></label></p>
+          <div class="field"><label for="r-name">Your name</label><input id="r-name" name="name" autocomplete="name" required></div>
+          <div class="field"><label for="r-phone">Mobile</label><input id="r-phone" name="phone" type="tel" autocomplete="tel" required></div>
+          <div class="field full"><label for="r-addr">Address and unit</label><input id="r-addr" name="address" autocomplete="street-address" required></div>
+          <div class="field"><label for="r-cat">What needs fixing?</label>
+            <select id="r-cat" name="category" required><option value="">Choose…</option><option>Plumbing / leak</option><option>Electrical</option><option>Heating / air conditioning</option><option>Appliance</option><option>Doors, windows, locks</option><option>Pests</option><option>Other</option></select></div>
+          <div class="field"><label for="r-urg">How urgent?</label>
+            <select id="r-urg" name="urgency"><option>Can wait a few days</option><option>Soon — affects daily life</option><option>Urgent — damage is happening</option></select></div>
+          <div class="field full"><label for="r-desc">Describe the problem</label><textarea id="r-desc" name="description" placeholder="Where is it, when did it start, what have you noticed?" required></textarea></div>
+          <div class="field full"><label for="r-photo">Photo <span class="hint">(optional, under 8 MB)</span></label><input id="r-photo" name="photo" type="file" accept="image/*,video/*"></div>
+          <label class="check full"><input type="checkbox" name="permission_to_enter" value="yes">It's OK to enter if I'm not home.</label>
+          <button class="btn btn-navy full" type="submit">Send repair request</button>
+        </form>
+      </div>
+    </section>
+
+    <section aria-labelledby="rent">
+      <div class="wrap grid grid-3">
+        <div class="card"><h3 id="rent">Paying rent</h3><p class="muted">Pay the way described in your lease. Online rent payment is coming soon — we'll let every resident know when it's ready.</p></div>
+        <div class="card"><h3>Your lease</h3><p class="muted">Questions about your lease, renewal or moving out? Send us a message and we'll reply within one business day.</p></div>
+        <div class="card"><h3>Moving out</h3><p class="muted">Please give written notice as set out in your lease. We'll send a move-out checklist to help get your deposit back.</p></div>
+      </div>
+    </section>

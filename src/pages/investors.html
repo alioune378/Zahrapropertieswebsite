@@ -1,0 +1,61 @@
+<!-- {"title": "Investors & partners", "description": "Zahra Properties has invested in Columbus, Ohio rental homes since 2010. Private lenders, co-investors and owners looking to sell: start a conversation with founder Mouhamadou Seck.", "nav": "investors", "file": "investors.html"} -->
+    <section class="band-navy" style="padding:80px 0 96px">
+      <div class="wrap stack" style="max-width:var(--wrap)">
+        <p class="eyebrow">Investors &amp; partners · Since 2010</p>
+        <h1 style="max-width:900px">Disciplined, hands-on residential investing in Columbus, Ohio.</h1>
+        <p class="lead">Zahra Properties buys, improves and holds quality rental homes, and manages them directly. We work with private lenders, co-investors and owners who are ready to sell.</p>
+        <div class="btns"><a class="btn btn-brass" href="#talk">Start a conversation</a></div>
+      </div>
+    </section>
+
+    <section aria-labelledby="founder">
+      <div class="wrap split">
+        <div class="portrait"><img src="/assets/img/mouhamadou-seck.webp" alt="Mouhamadou Seck, founder of Zahra Properties" width="560" height="560"></div>
+        <div class="stack">
+          <p class="eyebrow">Founder</p>
+          <h2 id="founder">Mouhamadou Seck</h2>
+          <p class="lead">Mouhamadou founded Zahra Properties in 2010 after five years at JPMorgan Chase, where he was an Assistant Vice President. He holds an MBA from the University of Wisconsin–Milwaukee and a master's in corporate law, banking and finance from Université Gaston Berger in Saint-Louis, Senegal.</p>
+          <p class="lead">He brings a banker's discipline to every acquisition and an owner's attention to every home and resident.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="band-white" aria-labelledby="approach">
+      <div class="wrap">
+        <div class="section-head"><div class="stack"><p class="eyebrow">Approach</p><h2 id="approach">How we invest</h2></div></div>
+        <ol class="grid grid-4 approach" style="list-style:none;padding:0;margin:0">
+          <li><span class="eyebrow">01</span><h3>Buy carefully</h3><p class="muted">Homes in established Columbus neighborhoods with steady rental demand, bought on the numbers.</p></li>
+          <li><span class="eyebrow">02</span><h3>Improve</h3><p class="muted">Renovations that last: systems, kitchens, baths and the curb appeal residents notice.</p></li>
+          <li><span class="eyebrow">03</span><h3>Manage directly</h3><p class="muted">Owner-run leasing and maintenance, with clear processes and quick responses.</p></li>
+          <li><span class="eyebrow">04</span><h3>Hold for the long term</h3><p class="muted">Stable residents, long leases and homes kept in good order year after year.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="talk" aria-labelledby="th">
+      <div class="wrap split" style="align-items:start">
+        <div class="stack">
+          <p class="eyebrow">Work with us</p>
+          <h2 id="th">Start a conversation</h2>
+          <p class="muted">Tell us how you'd like to work together. Mouhamadou replies personally, usually within two business days.</p>
+          <p class="hint">This page is for introductions only. It is not an offer to sell, or a solicitation of an offer to buy, any security. Any investment would be made only through formal written agreements.</p>
+        </div>
+        <form class="form" name="investor-inquiry" method="POST" action="/thanks" data-netlify="true" netlify-honeypot="company">
+          <input type="hidden" name="form-name" value="investor-inquiry">
+          <p class="hidden"><label>Leave this empty <input name="company"></label></p>
+          <fieldset class="choices full">
+            <legend>I'm interested in</legend>
+            <label><input type="radio" name="interest" value="Co-investing" required>Co-investing</label>
+            <label><input type="radio" name="interest" value="Private lending">Private lending</label>
+            <label><input type="radio" name="interest" value="Selling a property">Selling a property</label>
+            <label><input type="radio" name="interest" value="Other">Something else</label>
+          </fieldset>
+          <div class="field"><label for="i-name">Full name</label><input id="i-name" name="name" autocomplete="name" required></div>
+          <div class="field"><label for="i-email">Email</label><input id="i-email" name="email" type="email" autocomplete="email" required></div>
+          <div class="field"><label for="i-phone">Phone</label><input id="i-phone" name="phone" type="tel" autocomplete="tel"></div>
+          <div class="field"><label for="i-org">Company <span class="hint">(optional)</span></label><input id="i-org" name="organization"></div>
+          <div class="field full"><label for="i-msg">Message <span class="hint">(for a property: address, condition, timeline)</span></label><textarea id="i-msg" name="message" required></textarea></div>
+          <button class="btn btn-navy full" type="submit">Send</button>
+        </form>
+      </div>
+    </section>

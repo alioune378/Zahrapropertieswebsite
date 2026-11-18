@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /thanks
+Sitemap: https://zahraproperties.netlify.app/sitemap.xml

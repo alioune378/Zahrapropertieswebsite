@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rentals · Zahra Properties</title>
+  <meta name="description" content="Rental homes in Columbus, Ohio from Zahra Properties. Request a viewing, ask what's available, or get an alert when a new home is listed.">
+  <link rel="canonical" href="https://zahraproperties.netlify.app/rentals">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Zahra Properties">
+  <meta property="og:title" content="Rentals · Zahra Properties">
+  <meta property="og:description" content="Rental homes in Columbus, Ohio from Zahra Properties. Request a viewing, ask what's available, or get an alert when a new home is listed.">
+  <meta property="og:image" content="https://zahraproperties.netlify.app/assets/img/og-zahra.jpg">
+  <meta property="og:url" content="https://zahraproperties.netlify.app/rentals">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#1B2A41">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/site.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="/" aria-label="Zahra Properties home"><img src="/assets/img/logo.svg" alt="Zahra Properties" width="240" height="52"></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menu"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+      <nav id="site-nav" class="nav" aria-label="Main">
+        <a href="/rentals" aria-current="page">Rentals</a>
+        <a href="/residents">Residents</a>
+        <a href="/investors">Investors</a>
+        <a href="/#contact">Contact</a>
+        <a class="btn btn-navy" href="/rentals#viewing">Book a viewing</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+<div class="page-head">
+      <div class="wrap stack">
+        <p class="eyebrow">Rentals · Columbus, Ohio</p>
+        <h1>Find your next home</h1>
+        <p class="lead">Our homes are spread across Columbus neighborhoods and usually rent quickly. Tell us what you're looking for and we'll reply with what's available now or coming up, and book you a viewing.</p>
+        <div class="btns">
+          <a class="btn btn-navy" href="#viewing">Request a viewing</a>
+          <a class="btn btn-line" href="#alerts">Get new-listing alerts</a>
+        </div>
+      </div>
+    </div>
+
+    <section class="band-white" id="viewing" aria-labelledby="vh" style="padding-top:72px">
+      <div class="wrap split" style="align-items:start">
+        <div class="stack">
+          <p class="eyebrow">Book a viewing</p>
+          <h2 id="vh">Tell us what you need</h2>
+          <p class="muted">We reply within one business day with available homes that match and times to visit.</p>
+          <ul class="ticks">
+            <li>Viewings 7 days a week, by appointment</li>
+            <li>Confirmation by text or email</li>
+            <li>Apply online right after your visit</li>
+          </ul>
+        </div>
+        <form class="form" name="viewing-request" method="POST" action="/thanks" data-netlify="true" netlify-honeypot="company">
+          <input type="hidden" name="form-name" value="viewing-request">
+          <p class="hidden"><label>Leave this empty <input name="company"></label></p>
+          <div class="field"><label for="v-name">Full name</label><input id="v-name" name="name" autocomplete="name" required></div>
+          <div class="field"><label for="v-phone">Mobile</label><input id="v-phone" name="phone" type="tel" autocomplete="tel" required></div>
+          <div class="field full"><label for="v-email">Email</label><input id="v-email" name="email" type="email" autocomplete="email" required></div>
+          <div class="field"><label for="v-beds">Bedrooms</label>
+            <select id="v-beds" name="bedrooms"><option>Any</option><option>1</option><option>2</option><option>3</option><option>4+</option></select></div>
+          <div class="field"><label for="v-move">Move-in date</label><input id="v-move" name="move_in" type="date"></div>
+          <div class="field"><label for="v-area">Preferred area</label><input id="v-area" name="area" placeholder="e.g. Northeast Columbus, Westerville schools"></div>
+          <div class="field"><label for="v-budget">Monthly budget</label><input id="v-budget" name="budget" inputmode="numeric" placeholder="$"></div>
+          <fieldset class="choices full">
+            <legend>Best times for a viewing</legend>
+            <label><input type="checkbox" name="times[]" value="Weekday mornings">Weekday mornings</label>
+            <label><input type="checkbox" name="times[]" value="Weekday evenings">Weekday evenings</label>
+            <label><input type="checkbox" name="times[]" value="Weekends">Weekends</label>
+          </fieldset>
+          <div class="field full"><label for="v-msg">Anything else? <span class="hint">(pets, specific home you saw, questions)</span></label><textarea id="v-msg" name="message"></textarea></div>
+          <button class="btn btn-navy full" type="submit">Send viewing request</button>
+        </form>
+      </div>
+    </section>
+
+    <section id="alerts" aria-labelledby="ah">
+      <div class="wrap split" style="align-items:start">
+        <div class="stack">
+          <p class="eyebrow">New-listing alerts</p>
+          <h2 id="ah">Be the first to know</h2>
+          <p class="muted">Leave your email and what you're looking for. We'll write the day a matching home becomes available. No spam, and you can opt out anytime.</p>
+        </div>
+        <form class="form" name="listing-alerts" method="POST" action="/thanks" data-netlify="true" netlify-honeypot="company">
+          <input type="hidden" name="form-name" value="listing-alerts">
+          <p class="hidden"><label>Leave this empty <input name="company"></label></p>
+          <div class="field full"><label for="a-email">Email</label><input id="a-email" name="email" type="email" autocomplete="email" required></div>
+          <div class="field"><label for="a-beds">Bedrooms</label><select id="a-beds" name="bedrooms"><option>Any</option><option>1+</option><option>2+</option><option>3+</option><option>4+</option></select></div>
+          <div class="field"><label for="a-max">Max rent</label><input id="a-max" name="max_rent" inputmode="numeric" placeholder="$"></div>
+          <div class="field full"><label for="a-area">Areas</label><input id="a-area" name="areas" placeholder="Any area in Columbus"></div>
+          <button class="btn btn-brass full" type="submit">Notify me</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="band-sand" aria-labelledby="crit">
+      <div class="wrap split" style="align-items:start">
+        <div class="stack">
+          <p class="eyebrow">Before you apply</p>
+          <h2 id="crit">How we review applications</h2>
+          <p class="muted">Every applicant is reviewed with the same written criteria. Ask us for the full criteria for a specific home before you apply.</p>
+        </div>
+        <ul class="ticks">
+          <li>Each adult (18+) who will live in the home completes an application.</li>
+          <li>We verify identity, income and rental history.</li>
+          <li>A credit and background check runs through a secure screening service.</li>
+          <li>We respond as quickly as possible — usually within a few business days.</li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" id="contact">
+    <div class="wrap">
+      <div class="cols">
+        <div class="stack" style="gap:14px">
+          <img src="/assets/img/logo.svg" alt="Zahra Properties" width="200" height="44" style="height:52px;width:auto;align-self:flex-start">
+          <p class="muted">Locally owned and managed rental homes in Columbus, Ohio, since 2010.</p>
+        </div>
+        <div>
+          <h2>Get in touch</h2>
+          <ul>
+            <li><a href="/rentals#viewing">Request a viewing</a></li>
+            <li><a href="/investors#talk">Investor &amp; partner inquiries</a></li>
+            <li><a href="/residents#repair">Residents: request a repair</a></li>
+            <li class="muted">Columbus, Ohio</li>
+          </ul>
+        </div>
+        <div>
+          <h2>Explore</h2>
+          <ul>
+            <li><a href="/rentals">Rentals</a></li>
+            <li><a href="/apply">Apply online</a></li>
+            <li><a href="/residents">Residents</a></li>
+            <li><a href="/investors">Investors</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Fair housing</h2>
+          <p class="muted">Zahra Properties is an Equal Housing Opportunity provider. We do not discriminate on any basis protected by federal, Ohio or local law.</p>
+        </div>
+      </div>
+      <div class="legal">
+        <span>© <span data-year>2026</span> Zahra Properties LLC</span>
+        <span class="eho">Equal Housing Opportunity</span>
+      </div>
+    </div>
+  </footer>
+  <script>
+    (function () {
+      var b = document.querySelector('.menu-toggle'), n = document.getElementById('site-nav');
+      if (b && n) b.addEventListener('click', function () {
+        var open = n.classList.toggle('open'); b.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+      var y = document.querySelector('[data-year]'); if (y) y.textContent = new Date().getFullYear();
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+# Zahra Properties — static site (no build step needed; HTML is pre-built by tools/build.py)
+[build]
+  publish = "."
+  command = ""
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    X-Frame-Options = "DENY"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+# keep source files and tooling off the public site
+[[redirects]]
+  from = "/src/*"
+  to = "/404.html"
+  status = 404
+  force = true
+[[redirects]]
+  from = "/tools/*"
+  to = "/404.html"
+  status = 404
+  force = true
