@@ -44,12 +44,22 @@
     <section style="padding-top:24px">
       <div class="wrap" style="display:flex;flex-wrap:wrap;gap:40px;align-items:flex-start">
         <div style="flex:999 1 560px;min-width:0" class="stack">
-          <div class="photo-ph" style="border-radius:24px;min-height:360px">
-            <img src="/assets/img/mark-reversed.svg" alt="">
-            <span>Photos coming soon</span>
+          <div class="gallery" id="gallery">
+            <button type="button" class="g-main" data-i="0" aria-label="Open photo 1 of 9: Front of the home with covered porch and attached garage"><img src="/assets/img/homes/2406/exterior-lg.webp" alt="" loading="eager"></button>
+            <button type="button" class="" data-i="2" aria-label="Open photo 3 of 9: Kitchen with shaker cabinets and subway-tile backsplash"><img src="/assets/img/homes/2406/kitchen-md.webp" alt="" loading="lazy"></button>
+            <button type="button" class="" data-i="7" aria-label="Open photo 8 of 9: Bathroom with tiled tub surround"><img src="/assets/img/homes/2406/bath-md.webp" alt="" loading="lazy"></button>
+            <button type="button" class="" data-i="6" aria-label="Open photo 7 of 9: Entry hall and staircase"><img src="/assets/img/homes/2406/entry-md.webp" alt="" loading="lazy"></button>
+            <button type="button" class="" data-i="5" aria-label="Open photo 6 of 9: Bright room with three windows"><img src="/assets/img/homes/2406/room-md.webp" alt="" loading="lazy"><span class="g-more">View all 9 photos</span></button>
           </div>
+          <dialog class="lightbox" id="lightbox" aria-label="Photo viewer">
+            <img id="lb-img" src="" alt="">
+            <button type="button" class="lb-btn lb-close" aria-label="Close"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+            <button type="button" class="lb-btn lb-prev" aria-label="Previous photo"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 6l-6 6 6 6"/></svg></button>
+            <button type="button" class="lb-btn lb-next" aria-label="Next photo"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg></button>
+            <p class="lb-count" id="lb-count" aria-live="polite"></p>
+          </dialog>
           <div class="stack" style="gap:10px">
-            <span class="badge badge-brass" style="align-self:flex-start">New construction</span>
+            <span class="badge badge-brass" style="align-self:flex-start">Now leasing · New construction</span>
             <h1 style="font-size:clamp(36px,4.4vw,54px)">2406 Brooklyn Rd</h1>
             <p class="lead">Columbus, OH 43231 · Forest Park East · Westerville school district</p>
           </div>
@@ -123,6 +133,21 @@
         </form>
       </div>
     </section>
+    <script>
+      (function () {
+        var photos = [{"src": "/assets/img/homes/2406/exterior-lg.webp", "alt": "Front of the home with covered porch and attached garage"}, {"src": "/assets/img/homes/2406/open-plan-lg.webp", "alt": "Open kitchen and living area"}, {"src": "/assets/img/homes/2406/kitchen-lg.webp", "alt": "Kitchen with shaker cabinets and subway-tile backsplash"}, {"src": "/assets/img/homes/2406/kitchen-wide-lg.webp", "alt": "Kitchen and dining space"}, {"src": "/assets/img/homes/2406/living-lg.webp", "alt": "Living area looking toward the kitchen"}, {"src": "/assets/img/homes/2406/room-lg.webp", "alt": "Bright room with three windows"}, {"src": "/assets/img/homes/2406/entry-lg.webp", "alt": "Entry hall and staircase"}, {"src": "/assets/img/homes/2406/bath-lg.webp", "alt": "Bathroom with tiled tub surround"}, {"src": "/assets/img/homes/2406/porch-lg.webp", "alt": "Covered front porch and garage door"}];
+        var dlg = document.getElementById('lightbox'), img = document.getElementById('lb-img'), cnt = document.getElementById('lb-count'), i = 0;
+        function show(n) { i = (n + photos.length) % photos.length; img.src = photos[i].src; img.alt = photos[i].alt; cnt.textContent = (i + 1) + ' / ' + photos.length + ' · ' + photos[i].alt; }
+        document.querySelectorAll('#gallery button').forEach(function (b) {
+          b.addEventListener('click', function () { show(Number(b.dataset.i)); dlg.showModal(); });
+        });
+        dlg.querySelector('.lb-close').addEventListener('click', function () { dlg.close(); });
+        dlg.querySelector('.lb-prev').addEventListener('click', function () { show(i - 1); });
+        dlg.querySelector('.lb-next').addEventListener('click', function () { show(i + 1); });
+        dlg.addEventListener('click', function (e) { if (e.target === dlg) dlg.close(); });
+        dlg.addEventListener('keydown', function (e) { if (e.key === 'ArrowLeft') show(i - 1); if (e.key === 'ArrowRight') show(i + 1); });
+      })();
+    </script>
 
   </main>
 
