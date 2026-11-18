@@ -5,13 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Rentals · Zahra Properties</title>
   <meta name="description" content="Rental homes in Columbus, Ohio from Zahra Properties. Request a viewing, ask what's available, or get an alert when a new home is listed.">
-  <link rel="canonical" href="https://zahraproperties.netlify.app/rentals">
+  <link rel="canonical" href="https://zahrapropertieswebproject.netlify.app/rentals">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Zahra Properties">
   <meta property="og:title" content="Rentals · Zahra Properties">
   <meta property="og:description" content="Rental homes in Columbus, Ohio from Zahra Properties. Request a viewing, ask what's available, or get an alert when a new home is listed.">
-  <meta property="og:image" content="https://zahraproperties.netlify.app/assets/img/og-zahra.jpg">
-  <meta property="og:url" content="https://zahraproperties.netlify.app/rentals">
+  <meta property="og:image" content="https://zahrapropertieswebproject.netlify.app/assets/img/og-zahra.jpg">
+  <meta property="og:url" content="https://zahrapropertieswebproject.netlify.app/rentals">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="theme-color" content="#1B2A41">
   <link rel="icon" href="/favicon.ico" sizes="any">
@@ -26,7 +26,7 @@
   <a class="skip" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="wrap">
-      <a class="brand" href="/" aria-label="Zahra Properties home"><img src="/assets/img/logo.svg" alt="Zahra Properties" width="240" height="52"></a>
+      <a class="brand" href="/" aria-label="Zahra Properties home"><img src="/assets/img/logo-web.svg" alt="Zahra Properties" width="246" height="58"></a>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menu"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
       <nav id="site-nav" class="nav" aria-label="Main">
         <a href="/rentals" aria-current="page">Rentals</a>
@@ -51,11 +51,29 @@
       </div>
     </div>
 
+
+    <section style="padding-top:8px;padding-bottom:56px" aria-labelledby="avail">
+      <div class="wrap stack" style="gap:20px">
+        <h2 id="avail" style="font-size:34px">Available homes</h2>
+        <a class="listing-card" href="/2406-brooklyn-rd">
+          <div class="photo-ph"><img src="/assets/img/mark-reversed.svg" alt=""><span>Photos coming soon</span></div>
+          <div class="stack" style="padding:28px;gap:10px">
+            <span class="badge badge-brass" style="align-self:flex-start">New construction</span>
+            <h3 style="font-family:var(--serif);font-size:32px;font-weight:600">2406 Brooklyn Rd</h3>
+            <p class="muted">Columbus, OH 43231 · Westerville school district</p>
+            <p style="font-weight:600">3 bed · 2 bath · 1,764 sq ft · garage</p>
+            <p class="small muted">Rent: contact us</p>
+            <span class="btn btn-navy" style="align-self:flex-start;margin-top:6px">View home &amp; book a viewing</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
     <section class="band-white" id="viewing" aria-labelledby="vh" style="padding-top:72px">
       <div class="wrap split" style="align-items:start">
         <div class="stack">
           <p class="eyebrow">Book a viewing</p>
-          <h2 id="vh">Tell us what you need</h2>
+          <h2 id="vh">Looking for something else?</h2>
           <p class="muted">We reply within one business day with available homes that match and times to visit.</p>
           <ul class="ticks">
             <li>Viewings 7 days a week, by appointment</li>
@@ -65,6 +83,8 @@
         </div>
         <form class="form" name="viewing-request" method="POST" action="/thanks" data-netlify="true" netlify-honeypot="company">
           <input type="hidden" name="form-name" value="viewing-request">
+          <input type="hidden" name="home" value="Any / not sure yet">
+          <input type="hidden" name="occupants" value="">
           <p class="hidden"><label>Leave this empty <input name="company"></label></p>
           <div class="field"><label for="v-name">Full name</label><input id="v-name" name="name" autocomplete="name" required></div>
           <div class="field"><label for="v-phone">Mobile</label><input id="v-phone" name="phone" type="tel" autocomplete="tel" required></div>
@@ -127,7 +147,7 @@
     <div class="wrap">
       <div class="cols">
         <div class="stack" style="gap:14px">
-          <img src="/assets/img/logo.svg" alt="Zahra Properties" width="200" height="44" style="height:52px;width:auto;align-self:flex-start">
+          <img src="/assets/img/logo-web.svg" alt="Zahra Properties" width="230" height="54" style="height:54px;width:auto;align-self:flex-start">
           <p class="muted">Locally owned and managed rental homes in Columbus, Ohio, since 2010.</p>
         </div>
         <div>

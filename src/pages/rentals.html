@@ -11,11 +11,29 @@
       </div>
     </div>
 
+
+    <section style="padding-top:8px;padding-bottom:56px" aria-labelledby="avail">
+      <div class="wrap stack" style="gap:20px">
+        <h2 id="avail" style="font-size:34px">Available homes</h2>
+        <a class="listing-card" href="/2406-brooklyn-rd">
+          <div class="photo-ph"><img src="/assets/img/mark-reversed.svg" alt=""><span>Photos coming soon</span></div>
+          <div class="stack" style="padding:28px;gap:10px">
+            <span class="badge badge-brass" style="align-self:flex-start">New construction</span>
+            <h3 style="font-family:var(--serif);font-size:32px;font-weight:600">2406 Brooklyn Rd</h3>
+            <p class="muted">Columbus, OH 43231 · Westerville school district</p>
+            <p style="font-weight:600">3 bed · 2 bath · 1,764 sq ft · garage</p>
+            <p class="small muted">Rent: contact us</p>
+            <span class="btn btn-navy" style="align-self:flex-start;margin-top:6px">View home &amp; book a viewing</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
     <section class="band-white" id="viewing" aria-labelledby="vh" style="padding-top:72px">
       <div class="wrap split" style="align-items:start">
         <div class="stack">
           <p class="eyebrow">Book a viewing</p>
-          <h2 id="vh">Tell us what you need</h2>
+          <h2 id="vh">Looking for something else?</h2>
           <p class="muted">We reply within one business day with available homes that match and times to visit.</p>
           <ul class="ticks">
             <li>Viewings 7 days a week, by appointment</li>
@@ -25,6 +43,8 @@
         </div>
         <form class="form" name="viewing-request" method="POST" action="/thanks" data-netlify="true" netlify-honeypot="company">
           <input type="hidden" name="form-name" value="viewing-request">
+          <input type="hidden" name="home" value="Any / not sure yet">
+          <input type="hidden" name="occupants" value="">
           <p class="hidden"><label>Leave this empty <input name="company"></label></p>
           <div class="field"><label for="v-name">Full name</label><input id="v-name" name="name" autocomplete="name" required></div>
           <div class="field"><label for="v-phone">Mobile</label><input id="v-phone" name="phone" type="tel" autocomplete="tel" required></div>

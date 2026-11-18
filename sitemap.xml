@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://zahraproperties.netlify.app/</loc></url>
-  <url><loc>https://zahraproperties.netlify.app/rentals</loc></url>
-  <url><loc>https://zahraproperties.netlify.app/apply</loc></url>
-  <url><loc>https://zahraproperties.netlify.app/residents</loc></url>
-  <url><loc>https://zahraproperties.netlify.app/investors</loc></url>
+  <url><loc>https://zahrapropertieswebproject.netlify.app/</loc></url>
+  <url><loc>https://zahrapropertieswebproject.netlify.app/rentals</loc></url>
+  <url><loc>https://zahrapropertieswebproject.netlify.app/2406-brooklyn-rd</loc></url>
+  <url><loc>https://zahrapropertieswebproject.netlify.app/apply</loc></url>
+  <url><loc>https://zahrapropertieswebproject.netlify.app/residents</loc></url>
+  <url><loc>https://zahrapropertieswebproject.netlify.app/investors</loc></url>
 </urlset>

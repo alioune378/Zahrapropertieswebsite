@@ -7,7 +7,7 @@ Run:  python3 tools/build.py      (writes the .html files at the repo root)
 import json, pathlib, re
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-SITE = 'https://zahraproperties.netlify.app'  # change when the custom domain is live
+SITE = 'https://zahrapropertieswebproject.netlify.app'  # change when the custom domain is live
 
 NAV = [('rentals', '/rentals', 'Rentals'), ('residents', '/residents', 'Residents'),
        ('investors', '/investors', 'Investors'), ('contact', '/#contact', 'Contact')]
@@ -51,7 +51,7 @@ def layout(meta, body):
   <a class="skip" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="wrap">
-      <a class="brand" href="/" aria-label="Zahra Properties home"><img src="/assets/img/logo.svg" alt="Zahra Properties" width="240" height="52"></a>
+      <a class="brand" href="/" aria-label="Zahra Properties home"><img src="/assets/img/logo-web.svg" alt="Zahra Properties" width="246" height="58"></a>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menu">{ICON_MENU}</button>
       <nav id="site-nav" class="nav" aria-label="Main">
 {links}
@@ -68,7 +68,7 @@ def layout(meta, body):
     <div class="wrap">
       <div class="cols">
         <div class="stack" style="gap:14px">
-          <img src="/assets/img/logo.svg" alt="Zahra Properties" width="200" height="44" style="height:52px;width:auto;align-self:flex-start">
+          <img src="/assets/img/logo-web.svg" alt="Zahra Properties" width="230" height="54" style="height:54px;width:auto;align-self:flex-start">
           <p class="muted">Locally owned and managed rental homes in Columbus, Ohio, since 2010.</p>
         </div>
         <div>

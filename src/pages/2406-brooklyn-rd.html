@@ -1,0 +1,85 @@
+<!-- {"title": "2406 Brooklyn Rd, Columbus, OH 43231 · 3 bed, 2 bath home", "description": "New-construction 3-bedroom, 2-bath home at 2406 Brooklyn Rd, Columbus, Ohio 43231, in the Westerville school district. Full basement and attached garage. Request a viewing with Zahra Properties.", "nav": "rentals", "file": "2406-brooklyn-rd.html"} -->
+    <div class="wrap" style="padding-top:28px"><a href="/rentals" class="small">← All homes</a></div>
+
+    <section style="padding-top:24px">
+      <div class="wrap" style="display:flex;flex-wrap:wrap;gap:40px;align-items:flex-start">
+        <div style="flex:999 1 560px;min-width:0" class="stack">
+          <div class="photo-ph" style="border-radius:24px;min-height:360px">
+            <img src="/assets/img/mark-reversed.svg" alt="">
+            <span>Photos coming soon</span>
+          </div>
+          <div class="stack" style="gap:10px">
+            <span class="badge badge-brass" style="align-self:flex-start">New construction</span>
+            <h1 style="font-size:clamp(36px,4.4vw,54px)">2406 Brooklyn Rd</h1>
+            <p class="lead">Columbus, OH 43231 · Forest Park East · Westerville school district</p>
+          </div>
+          <dl class="facts">
+            <div><dt>Type</dt><dd>Single-family home</dd></div>
+            <div><dt>Bedrooms</dt><dd>3</dd></div>
+            <div><dt>Bathrooms</dt><dd>2 full</dd></div>
+            <div><dt>Living area</dt><dd>1,764 sq ft</dd></div>
+            <div><dt>Built</dt><dd>2026</dd></div>
+            <div><dt>Garage</dt><dd>1-car attached</dd></div>
+          </dl>
+          <div class="stack" style="gap:12px">
+            <h2 style="font-size:30px">About this home</h2>
+            <p class="lead">A brand-new two-story home in the Westerville school district. The first floor is open and bright with tall ceilings; all three bedrooms are upstairs. A full basement adds storage and flexible space, and the attached garage keeps the car out of the Ohio winter.</p>
+          </div>
+          <div class="stack" style="gap:12px">
+            <h2 style="font-size:30px">Features</h2>
+            <ul class="ticks" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr))">
+              <li>New construction (2026)</li>
+              <li>Open first-floor plan, tall ceilings</li>
+              <li>3 bedrooms upstairs</li>
+              <li>2 full bathrooms</li>
+              <li>Full basement</li>
+              <li>1-car attached garage</li>
+              <li>Westerville City Schools</li>
+              <li>Public water and sewer</li>
+            </ul>
+          </div>
+        </div>
+
+        <aside style="flex:1 1 340px;min-width:0" class="stack">
+          <div class="card" style="gap:14px;box-shadow:0 16px 40px rgba(27,42,65,.07)">
+            <p class="small muted">Monthly rent</p>
+            <p class="price">Contact us</p>
+            <p class="small muted">Ask for rent, deposit, pet policy and move-in date.</p>
+            <a class="btn btn-navy" href="#viewing">Request a viewing</a>
+            <a class="btn btn-line" href="/apply?home=2406-brooklyn-rd">Apply for this home</a>
+            <p class="hint" style="text-align:center">Equal Housing Opportunity</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="band-white" id="viewing" aria-labelledby="vh" style="padding-top:72px">
+      <div class="wrap split" style="align-items:start">
+        <div class="stack">
+          <p class="eyebrow">Book a viewing</p>
+          <h2 id="vh">See 2406 Brooklyn Rd</h2>
+          <p class="muted">Send your details and the times that suit you. We'll confirm a viewing by text or email, usually within one business day.</p>
+        </div>
+        <form class="form" name="viewing-request" method="POST" action="/thanks" data-netlify="true" netlify-honeypot="company">
+          <input type="hidden" name="form-name" value="viewing-request">
+          <input type="hidden" name="home" value="2406 Brooklyn Rd">
+          <input type="hidden" name="bedrooms" value="3">
+          <input type="hidden" name="area" value="Forest Park East (2406 Brooklyn Rd)">
+          <input type="hidden" name="budget" value="">
+          <p class="hidden"><label>Leave this empty <input name="company"></label></p>
+          <div class="field"><label for="b-name">Full name</label><input id="b-name" name="name" autocomplete="name" required></div>
+          <div class="field"><label for="b-phone">Mobile</label><input id="b-phone" name="phone" type="tel" autocomplete="tel" required></div>
+          <div class="field full"><label for="b-email">Email</label><input id="b-email" name="email" type="email" autocomplete="email" required></div>
+          <div class="field"><label for="b-move">Move-in date</label><input id="b-move" name="move_in" type="date"></div>
+          <div class="field"><label for="b-occ">How many people?</label><input id="b-occ" name="occupants" type="number" min="1"></div>
+          <fieldset class="choices full">
+            <legend>Best times for a viewing</legend>
+            <label><input type="checkbox" name="times[]" value="Weekday mornings">Weekday mornings</label>
+            <label><input type="checkbox" name="times[]" value="Weekday evenings">Weekday evenings</label>
+            <label><input type="checkbox" name="times[]" value="Weekends">Weekends</label>
+          </fieldset>
+          <div class="field full"><label for="b-msg">Questions <span class="hint">(pets, parking, anything else)</span></label><textarea id="b-msg" name="message"></textarea></div>
+          <button class="btn btn-navy full" type="submit">Send viewing request</button>
+        </form>
+      </div>
+    </section>

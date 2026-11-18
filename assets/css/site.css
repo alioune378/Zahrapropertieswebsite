@@ -56,7 +56,7 @@ p { margin: 0; }
 /* Header */
 .site-header { background: #fff; border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 50; }
 .site-header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 84px; }
-.brand img { height: 62px; width: auto; }
+.brand img { height: 58px; width: auto; }
 .nav { display: flex; align-items: center; gap: 26px; font-weight: 500; font-size: 15px; }
 .nav a { text-decoration: none; }
 .nav a[aria-current="page"] { color: var(--brass-ink); }
@@ -68,7 +68,7 @@ p { margin: 0; }
   .nav.open { display: flex; }
   .nav a { padding: 14px 0; border-bottom: 1px solid var(--line); }
   .nav .btn { margin-top: 12px; border-bottom: 0; }
-  .brand img { height: 42px; }
+  .brand img { height: 50px; }
 }
 
 /* Sections */
@@ -150,3 +150,16 @@ input[type="file"] { padding: 12px; background: var(--ivory); border-style: dash
 .site-footer ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; }
 .site-footer .legal { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; color: var(--muted); font-size: 13px; }
 .eho { display: inline-flex; align-items: center; gap: 8px; }
+
+/* Listings */
+.listing-card { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; text-decoration: none; color: var(--ink); display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); transition: box-shadow .15s; }
+.listing-card:hover { box-shadow: 0 16px 40px rgba(27,42,65,.10); color: var(--ink); }
+.photo-ph { background: var(--navy); min-height: 280px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; color: #D5DAE3; font-size: 14px; position: relative; }
+.photo-ph img { width: 110px; }
+.badge { display: inline-block; font-size: 12px; font-weight: 600; padding: 6px 12px; border-radius: 999px; background: var(--navy); color: #fff; }
+.badge-brass { background: var(--brass); color: var(--navy); }
+.facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 12px; margin: 0; }
+.facts div { background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 16px; }
+.facts dt { font-size: 12px; color: var(--muted); }
+.facts dd { margin: 4px 0 0; font-weight: 600; font-size: 18px; }
+.price { font-family: var(--serif); font-size: 34px; font-weight: 600; line-height: 1; }

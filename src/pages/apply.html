@@ -51,3 +51,11 @@
         </form>
       </div>
     </section>
+    <script>
+      (function () {
+        var h = new URLSearchParams(location.search).get('home');
+        var names = { '2406-brooklyn-rd': '2406 Brooklyn Rd, Columbus, OH 43231' };
+        var el = document.getElementById('p-home');
+        if (h && el && names[h]) el.value = names[h];
+      })();
+    </script>
